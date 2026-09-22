@@ -1,0 +1,9 @@
+node_modules/
+<<<<<<< HEAD
+=======
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+>>>>>>> b337de777fc48b6722d27e8b6f7df73455497948
