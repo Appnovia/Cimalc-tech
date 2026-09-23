@@ -1,0 +1,2 @@
+import { Card, CardContent } from "@/components/ui/card";
+export default function AccountProfilePage() { return <div className="space-y-6"><h1 className="text-3xl font-bold tracking-tight">Profile</h1><Card><CardContent className="p-6"><p className="text-sm leading-6 text-muted">Profile fields, company information, and saved addresses will be connected here through Better Auth and the customer profile API.</p></CardContent></Card></div>; }

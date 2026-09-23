@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
+export function ValueProps() {
+  return <section className="border-y border-border bg-background py-16 md:py-24"><div className="mx-auto grid max-w-[1440px] gap-10 px-4 md:grid-cols-[.8fr_1.2fr] md:px-8"><div><p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">A little help goes a long way</p><h2 className="mt-4 max-w-md text-3xl font-bold leading-tight tracking-tight text-default md:text-5xl">You do not have to figure it all out alone.</h2></div><div className="max-w-2xl"><p className="text-xl leading-9 text-default md:text-2xl">Tell us what you are trying to solve—better sound, a faster laptop, a more useful setup—and we will help you narrow it down.</p><p className="mt-5 max-w-xl text-base leading-7 text-muted">No rush, no confusing jargon, and no pressure to choose the most expensive option. When you are ready, request a quote and we will take it from there.</p><Link href="/contact" className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-brand transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand">Talk to a staff member <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link></div></div></section>;
+}

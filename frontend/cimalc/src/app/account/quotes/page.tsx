@@ -1,0 +1,2 @@
+import { EmptyState } from "@/components/ui/empty-state";
+export default function AccountQuotesPage() { return <div className="space-y-6"><div><p className="text-sm font-medium text-brand">Account activity</p><h1 className="mt-1 text-3xl font-bold tracking-tight">My quotes</h1><p className="mt-2 text-sm text-muted">Your submitted quote requests and their latest status.</p></div><EmptyState title="No quotes yet" description="When you request a quote, it will appear here for easy follow-up." actionLabel="Explore products" actionHref="/products" /></div>; }
