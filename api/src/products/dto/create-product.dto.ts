@@ -1,0 +1,62 @@
+import { Type } from "class-transformer";
+import { ArrayMaxSize, ArrayMinSize, IsArray, IsBoolean, IsEnum, IsInt, IsOptional, IsString, Min, ValidateNested } from "class-validator";
+import { ProductStatus } from "../../generated/prisma/client.js";
+
+export class CreateProductDto {
+  @IsString()
+  name!: string;
+
+  @IsOptional()
+  @IsString()
+  slug?: string;
+
+  @IsOptional()
+  @IsString()
+  description?: string;
+
+  @IsOptional()
+  @IsString()
+  image?: string;
+
+  @IsArray()
+  @ArrayMinSize(1)
+  @ArrayMaxSize(5)
+  @ValidateNested({ each: true })
+  @Type(() => ProductImageDto)
+  images!: ProductImageDto[];
+
+  @IsString()
+  categoryId!: string;
+
+  @IsOptional()
+  @IsInt()
+  @Min(0)
+  stock?: number;
+
+  @IsOptional()
+  @IsEnum(ProductStatus)
+  status?: ProductStatus;
+
+  @IsOptional()
+  @IsOptional()
+  @IsBoolean()
+  featured?: boolean;
+}
+
+export class ProductImageDto {
+  @IsString()
+  key!: string;
+
+  @IsString()
+  url!: string;
+
+  @IsString()
+  alt!: string;
+
+  @IsBoolean()
+  isPrimary!: boolean;
+
+  @IsInt()
+  @Min(0)
+  position!: number;
+}

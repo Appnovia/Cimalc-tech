@@ -3,6 +3,8 @@ node_modules/
 =======
 dist/
 coverage/
+*.tsbuildinfo
+src/generated/prisma/
 .env
 .env.*
 !.env.example
